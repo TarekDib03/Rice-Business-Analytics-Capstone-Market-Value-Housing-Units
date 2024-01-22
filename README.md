@@ -5,8 +5,7 @@
 # Change working directory
 import os
 os.chdir("D:\Rice_Uni_Business_Analytics_Capstone\Data")
-```
-```python
+
 # Data files with extension .txt
 txt_files = [item for item in os.listdir() if item.endswith(".txt")]
 txt_files
