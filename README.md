@@ -1527,7 +1527,7 @@ pd.DataFrame(owned_single_family_housing_df.groupby("REGION")["VALUE"].
 
 
 
-All 4 regions have the same maximum market value of \\$2.52 million, and the same minimum of \\$10,000. However, the average market value ranges between \\$186,871 in the Midwest and \\$387,586 in the West. On average, housing units in the Midwest and South are much cheaper than those in the Northeast and the West. 
+All 4 regions have the same maximum market value of \$2.52 million, and the same minimum of \$10,000. However, the average market value ranges between \$186,871 in the Midwest and \$387,586 in the West. On average, housing units in the Midwest and South are much cheaper than those in the Northeast and the West. 
 
 
 ```python
@@ -1744,7 +1744,7 @@ units_df.sort_values(by="number_of_units").reset_index(drop=True)
 units_df.to_csv("year.csv")
 ```
 
-From the table above, the yearly average market value barely increases for housing units built between 1940 (\\$231,032) and 1980 (\\$249,311). This accounts for a change of only about an 8% increase in market value for housing units built between 1940 and 1980. For those built between 1919 and 1930, the yearly average market values do not seem to change significantly (~3% increase in market values between 1919 and 1930). Housing units built in 1940 have the lowest average market value of about \\$231,032. The most expensive are housing units built in 2013.
+From the table above, the yearly average market value barely increases for housing units built between 1940 (\$231,032) and 1980 (\$249,311). This accounts for a change of only about an 8% increase in market value for housing units built between 1940 and 1980. For those built between 1919 and 1930, the yearly average market values do not seem to change significantly (~3% increase in market values between 1919 and 1930). Housing units built in 1940 have the lowest average market value of about \$231,032. The most expensive are housing units built in 2013.
 
 Since there are only 13 housing units built in 2013, and the average market value is almost double the average market value in 2011, housing units built in 2013 will be excluded because the number of units is very low in 2013, and may bias the results!
 
@@ -1767,7 +1767,7 @@ plt.ylabel("Avearge Current Market Value of Units");
     
 
 
-Current average market values for housing units range between \\$231,032 for those built in 1940 and \\$362,969 built-in 2011, an increase of about 57% in market value in housing units built in 1940. The yearly average market values for housing units built during the global financial crisis (2007 - 2009) fluctuate significantly. For housing units built in 2008, the average market values sit at about \\$356,370. However, for housing units built in 2009, the average market values drop significantly to \\$297,150, i.e. a drop of about 17%. From the above barplot, the average market value is approximately uniformly distributed throughout the years from 1919 to 2012. The average market value per housing unit is estimated to be about \\$262,686. The Variable `BUILT` will not be included in the linear regression model. No time series analysis will be discussed in this report!  
+Current average market values for housing units range between \$231,032 for those built in 1940 and \$362,969 built in 2011, an increase of about 57% in market value in housing units built in 1940. The yearly average market values for housing units built during the global financial crisis (2007 - 2009) fluctuated significantly. For housing units built in 2008, the average market values sit at about \\$356,370. However, for housing units built in 2009, the average market values drop significantly to \$297,150, i.e. a drop of about 17%. From the above barplot, the average market value is approximately uniformly distributed throughout the years from 1919 to 2012. The average market value per housing unit is estimated to be about \$262,686.
 
 
 ```python
@@ -1908,7 +1908,7 @@ plt.title("Current Market Values of Units vs. Monthly Mortgage Payment");
     
 
 
-As expected, from the scatterplot above, the higher the monthly motgage payment, the higher the market values of the housing units. Though this is true, however, for the purpose of our study, monthly mortgage payments will not add any information to predict the current market value (price) of the housing units. Thus, these variables will not be included in the regression model. 
+As expected, from the scatterplot above, the higher the monthly mortgage payment, the higher the market values of the housing units. Though this is true, however, for our study, monthly mortgage payments will not add any information to predict the current market value (price) of the housing units. Thus, these variables will not be included in the regression model. 
 
 
 ```python
@@ -1925,7 +1925,7 @@ plt.title("Number of Rooms vs. Number of Bedrooms");
     
 
 
-Number of rooms and number of bedrooms are highly correlated as shown in the above scatterplot, and the high correlation between the 2 variables. The Variable `BEDRMS` will be dropped to avoid multicollinearity issue. 
+The number of rooms and number of bedrooms are highly correlated as shown in the above scatterplot, and the high correlation between the 2 variables. The Variable `BEDRMS` will be dropped to avoid multicollinearity issues. 
 
 
 ```python
@@ -2439,7 +2439,7 @@ val.set_titles("{col_name} Region");
     
 
 
-The distribution of `VALUE` is right skewed. A log transformation could help to make the distribution more bell sahped!
+The distribution of `VALUE` is right skewed. A log transformation could help to make the distribution more bell-shaped!
 
 
 ```python
@@ -2957,7 +2957,7 @@ type(res_region)
 
 
 
-Using Tukey HSD test, all the means of current market values are different throughout all 4 regions as shown in the table above. P-values of all groups are close to zero, and thus the null hypothesis is rejected. The null hypothesis claims that the means between two groups are equal.  
+Using the Tukey HSD test, all the means of current market values are different throughout all 4 regions as shown in the table above. P-values of all groups are close to zero, and thus the null hypothesis is rejected. The null hypothesis claims that the means between the two groups are equal.  
 
 ### Summary Tables
 
@@ -3141,7 +3141,7 @@ pd.pivot_table(owned_single_family_housing_df, values=["VALUE", "ln_value"], ind
 
 
 
-Mean and median are approximately equal throughout the 4 regions after the Variable `VALUE` was log transformed. Howver, before it was transformed, the mean and median seemed to be significantly different, which implies that current market values of housing units are right skewed in this case since means are higher than medians.
+Mean and median are approximately equal throughout the 4 regions after the Variable `VALUE` was log-transformed. However, before it was transformed, the mean and median seemed to be significantly different, which implies that current market values of housing units are right-skewed in this case since means are higher than medians.
 
 ### Use Scikitlearn to run the above Regression Analysis
 
