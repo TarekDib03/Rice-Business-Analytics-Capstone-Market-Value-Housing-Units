@@ -9,7 +9,7 @@ os.chdir("D:\Rice_Uni_Business_Analytics_Capstone\Data")
 # Data files with extension .txt
 txt_files = [item for item in os.listdir() if item.endswith(".txt")]
 txt_files
-```
+
     ['thads2001.txt',
      'thads2003.txt',
      'thads2005.txt',
