@@ -890,13 +890,13 @@ print(fvalue, pvalue)
     - 6 	HU, in rooming house
     - 7 	Boat or recreation vehicle
     - 9 	HU, not specified above
-- VALUE	(Numerical, $\)): Current market value of unit
+- VALUE	(Numerical, \$\)): Current market value of unit
 - NUNITS (Numerical): Number of Units in Building
 - ROOMS	(Numerical): Number of rooms in the unit
 - PER (Numerical): Number of persons in Household
 - ZINC2 (Numerical): Annual Household income
 - ZADEQ	(Character): Adequacy of unit - ‘1’: Adequate, '2’: Moderately Inadequate, '3’: Severely Inadequate, ‘-6’: Vacant - No information
-- ZSMHC	(Numerical, \$\): Monthly housing costs. For renters, housing cost is contract rent plus utility costs. For Owners, mortgage is not included
+- ZSMHC	(Numerical, \$\): Monthly housing costs. For renters, housing cost is contract rent plus utility costs. For Owners, the mortgage is not included
 - STRUCTURETYPE (Numerical)	Structure Type
     - 1 	Single Family
     - 2 	2-4 units
