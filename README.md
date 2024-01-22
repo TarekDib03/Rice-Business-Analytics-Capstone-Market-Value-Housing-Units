@@ -1,6 +1,5 @@
 ### Reading Data and Importing Modules
 
-
 ```python
 # Change working directory
 import os
