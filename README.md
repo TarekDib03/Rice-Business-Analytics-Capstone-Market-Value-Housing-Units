@@ -4412,7 +4412,7 @@ coefs.sort_values(by="Coefficients", key=abs, ascending=False)
 </table>
 </div>
 
-### Interpretation of the Regression Coefficients and Results
+### Interpretation of the Regression Coefficients
 
 - β0: No managerially relevant interpretation, since talking about a situation when all 'X' variables are zero does not make managerial sense.
 
@@ -4446,6 +4446,6 @@ coefs.sort_values(by="Coefficients", key=abs, ascending=False)
 
 - β15: Every one-year delay in the 'Year Built' of the housing unit, there is a  0.2% increase in the market value of the housing unit, all other variables being kept at the same level.
 
-#### Interpretation of R-square
+### Interpretation of R-square
 
 The R-square is about 0.61, indicating that the model explains about 61 percent of the variation in the market value of housing units.
