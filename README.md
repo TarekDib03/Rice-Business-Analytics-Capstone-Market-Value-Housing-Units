@@ -4411,15 +4411,3 @@ coefs.sort_values(by="Coefficients", key=abs, ascending=False)
   </tbody>
 </table>
 </div>
-
-
-
-
-```python
-
-```
-
-
-```python
-
-```
