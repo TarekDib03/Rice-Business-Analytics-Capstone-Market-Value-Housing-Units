@@ -4411,3 +4411,41 @@ coefs.sort_values(by="Coefficients", key=abs, ascending=False)
   </tbody>
 </table>
 </div>
+
+### Interpretation of the Regression Coefficients and Results
+
+- β0: No managerially relevant interpretation, since talking about a situation when all 'X' variables are zero does not make managerial sense.
+
+- β1: For every one percentage increase in the 2011 market value, the current market value increases by about 0.584%, all other variables being kept at the same level.
+  
+- β2: For every one percentage increase in the fair market rent, the market value increases by 0.37%, all other variables remaining at the same level.
+
+- β3: For every one percentage increase in the area median income, the market value increases by 0.16%, all other variables remaining at the same level.
+
+- β4: When the housing unit is in the south region of the country, then the market value tends to be lower by 10.8% as compared to a similar housing unit being in the West region, all other variables being kept at the same level. 
+
+- β5: When the housing unit is in the midwest region of the country, then the market value tends to be lower by 9.6% as compared to a similar housing unit being in the western region, all other variables being kept at the same level.
+
+- β6: When the housing unit is in the northeast region of the country, then the market value tends to be lower by 8.0% as compared to a similar housing unit being in the western region, all other variables being kept at the same level.
+
+- β7: For every one percentage increase in the monthly utility costs, the market value increases by 0.053%, all other variables remaining at the same level.
+
+- β8: For every one percentage increase in the annual household income, the market value increases by 0.053%, all other variables remaining at the same level.
+
+- β9: One additional room corresponds to a 4.8% increase in the market value of the housing unit, all other variables being kept at the same level.
+
+- β10: When the geographical location of the Housing unit is classified as a 'Central City' area, then the market value of the housing unit is lower by 4.4%, all other variables being kept at the same level.
+
+- β11: Every additional bedroom corresponds to a 4.0% decrease in the market value of the housing unit, all other variables being kept at the same level
+
+- β12: When the housing unit is classified as 'Adequate' as compared to other adequacy categorizations, then the market value tends to be higher by 2.3%, all other variables being kept at the same level.
+
+- β13: Every additional person in the household corresponds to a 0.8% decrease in the market value of the housing unit, all other variables being kept at the same level.
+
+- β14: For every one percentage increase in the monthly utility costs, the market value increases by 0.007%, all other variables remaining at the same level.
+
+- β15: Every one-year delay in the 'Year Built' of the housing unit, there is a  0.2% increase in the market value of the housing unit, all other variables being kept at the same level.
+
+#### Interpretation of R-square
+
+The R-square is about 0.61, indicating that the model explains about 61 percent of the variation in the market value of housing units.
