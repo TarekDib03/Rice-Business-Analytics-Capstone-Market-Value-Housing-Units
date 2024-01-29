@@ -356,7 +356,8 @@ print(round(t_stat_2013, 4), round(p_value_2013, 4))
 
 ```python
 def diff_in_means_test(df, x, y):
-    '''Difference in means test for current market vlaues of occupied vs. vacant housing units.
+    '''Difference in means test for current market values of occupied vs. vacant housing units. The Function f(df, x) is used to
+        extract market values that are $1,000 or more.
     Inputs: dataframe df, x: column name (string), y: column name (string) 
     '''
     occupied = f(df, x)[f(df, x)[y] == "'1'"][x]
@@ -367,9 +368,9 @@ def diff_in_means_test(df, x, y):
 
 
 ```python
-# Years
+# Years - use the range function in Python to create a list of values between 2005 and 2013 with a 2-year increment
 years_2 = range(2005, 2015, 2)
-# Empty dictionary for the t statistics values
+# Initiate an empty dictionary for the t statistics values
 t_stats = {}
 # Empty dictionary for the p-values
 p_values = {} 
@@ -381,6 +382,7 @@ for i in range(len(dfs)):
 
 
 ```python
+# Use the Pandas melt method to transpose (unpivot a wide dataframe into a long one) the dataframe
 pd.melt(pd.DataFrame([t_stat])).rename(columns={"variable": "Year", "value": "t_stat"})
 ```
 
@@ -423,6 +425,7 @@ pd.melt(pd.DataFrame([t_stat])).rename(columns={"variable": "Year", "value": "t_
 
 
 ```python
+# Same for p-values
 pd.melt(pd.DataFrame([p_values])).rename(columns={"variable": "Year", "value": "p_value"})
 ```
 
@@ -485,7 +488,7 @@ pd.melt(pd.DataFrame([p_values])).rename(columns={"variable": "Year", "value": "
 
 
 ```python
-# Similar to the above, but the test is one sided t-test
+# Similar to the above diff_in_means function, but the test is one-sided
 def one_sided_ttest(df, x, y):
     occupied = f(df, x)[f(df, x)[y] == "'1'"][x]
     vacant = f(df, x)[f(df, x)[y] == "'3'"][x]
@@ -660,8 +663,9 @@ yearly_fmr.head()
 
 
 
-
+##### Yearly Average Fair Market Rent
 ```python
+# Initiate an empty list for the fair market rent
 fmr_columns = []
 warnings.filterwarnings("ignore")
 for column in list(yearly_fmr.columns):
@@ -757,12 +761,24 @@ for i in range(1, len(fmrs)):
 
 
 ```python
+
+The large values of the t-statistics inform us that there is a significant difference in average fair market rents in subsequent
+years. What I mean is that the fair market rent in 2007 is statistically significantly different from that in 2005, 2009 is
+significantly different from 2007, etc.
+  
 def percent_increase_fmr(x, y):
+    ''' The function returns percentage difference in fair market rent in subsequent years (difference between 2005 and 2007,
+        between 2007 and 2009, etc.)
+
+        Inputs: x - year, y - next available year
+    '''
     return((yearly_fmr_sub[y] - yearly_fmr_sub[x]) / yearly_fmr_sub[x] * 100)
 ```
 
 
 ```python
+# Iterate over the length of fmrs to output the percentage increase in fair market rent between 2 subsequent years
+
 for i in range(1, len(fmrs)):
     print("The average percent increase in fair market rent between {} and {} is {}%".
           format(fmrs[i-1][-4:], fmrs[i][-4:], 
